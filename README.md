@@ -76,7 +76,7 @@ src
 
 API Endpoint
 
-POST /api/receipts/generate
+POST /api/receipt
 
 Generates a receipt based on the given input items.
 
