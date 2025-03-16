@@ -9,8 +9,8 @@ import java.util.List;
 public class ReceiptGenerator {
     private final TaxCalculator taxCalculator;
 
-    public ReceiptGenerator() {
-        this.taxCalculator = new TaxCalculator();
+    public ReceiptGenerator(TaxCalculator taxCalculator) {
+        this.taxCalculator = taxCalculator;
     }
 
     public String generateReceipt(List<Item> items) {
@@ -19,7 +19,7 @@ public class ReceiptGenerator {
         double totalCost = 0.0;
 
         for (Item item : items) {
-            double taxAmount = taxCalculator.calculateTax(item);
+            double taxAmount = taxCalculator.calculateTotalTax(item);
             double finalPrice = taxCalculator.calculateFinalPrice(item);
 
             receiptBuilder

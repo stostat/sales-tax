@@ -6,11 +6,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Item {
-    private String name;
-    private boolean isImported;
-    private boolean isExempt;
-    private int quantity;
-    private double price;
+    private final String name;
+    private final boolean isImported;
+    private final boolean isExempt;
+    private final int quantity;
+    private final double price;
 
     public Item(String name, boolean isImported, boolean isExempt, int quantity, double price) {
         this.name = name;
