@@ -58,13 +58,17 @@ src
 
 │ │ │ ├── Item.java # Represents an item in the receipt
 
-│ │ │ └── Tax.java # Logic for tax calculations
-
 │ │ ├── service
+
+│ │ │ ├── BasicSalesTax.java # Handles tax computation logic
+
+│ │ │ ├── ImportDutyTax.java # Handles tax computation logic for imported goods
 
 │ │ │ ├── TaxCalculator.java # Handles tax computation logic
 
 │ │ │ └── ReceiptGenerator.java # Handles receipt generation
+
+│ │ │ ├── TaxCalculationStrategy.java # Handles tax computation Strategy
 
 │ └── test
 
@@ -76,7 +80,7 @@ src
 
 API Endpoint
 
-POST /api/receipts/generate
+POST /api/receipt
 
 Generates a receipt based on the given input items.
 
